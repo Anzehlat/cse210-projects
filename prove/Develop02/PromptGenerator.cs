@@ -4,6 +4,7 @@ public class PromptGenerator
 
     public PromptGenerator()
     {
+        //list of prompts 
         _prompts = new List<string>
         {
         "Who was the most interesting person you've interacted with today?",
@@ -15,7 +16,7 @@ public class PromptGenerator
         "What is one high and one low you've had today?"
         };
     }
-
+//generate a random prompt for user
     public string GetRandomPrompt()
     {
         if (_prompts.Count == 0)

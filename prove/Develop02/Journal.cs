@@ -11,10 +11,12 @@ public class Journal
     {
         foreach (Entry entry in _entries)
         {
+            //organized what will be shown when entry is written
             Console.WriteLine($"{entry.Date}: {entry.Prompt} - {entry.Response}");
         }
     }
 
+//save to file and add date
     public void SaveToFile()
     {
         const string filePath = "entries.txt";
@@ -36,6 +38,7 @@ public class Journal
         }
     }
 
+//load from file entries.txt
     public void LoadFromFile()
     {
         const string filePath = "entries.txt";

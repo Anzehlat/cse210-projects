@@ -48,11 +48,12 @@ class Program
                 case "4":
                     myJournal.SaveToFile();
                     break;
-
+                
+                //added a note when done writing an entry for the day
                 case "5":
                     Console.WriteLine("Thank you for journaling today. Goodbye!");
                     return;
-
+                //added a default. It's always good to have a back up error message for the user 
                 default:
                     Console.WriteLine("Sorry, that was an invalid choice. Try again.");
                     break;
@@ -60,6 +61,7 @@ class Program
         }
     }
 
+//Get random prompt from list
     static void WriteEntry(Journal journal)
     {
         string randomPrompt = GetRandomPrompt();
@@ -80,11 +82,13 @@ class Program
 
     static string GetRandomPrompt()
     {
+        //added if 0, no prompts are available
         if (prompts.Count == 0)
         {
             return "No prompts available.";
         }
 
+//return prompt
         Random random = new Random();
         int index = random.Next(prompts.Count);
         return prompts[index];
