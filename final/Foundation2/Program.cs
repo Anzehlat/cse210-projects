@@ -16,8 +16,8 @@ class Program
         Customer internationalCustomer = new Customer("Bobby Wolfley", internationalAddress);
 
         //products
-        Product product1 = new Product("Widget", 1, 10.0, 2);
-        Product product2 = new Product("Gadget", 2, 15.0, 1);
+        Product product1 = new Product("Lotion", 1, 10.0, 2);
+        Product product2 = new Product("Backpack", 2, 15.0, 1);
 
         //orders
         List<Product> orderProducts1 = new List<Product> { product1, product2 };
